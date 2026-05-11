@@ -8,16 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    //表示文字を格納する変数
+    @State var outputText = "Hello,world!"
+    
     var body: some View {
+        
+        //縦方向にレイアウト
         VStack {
-            Text("Hi, world!")
+            //文字を表示
+            Text(outputText)
+                //フォントサイズを大きく設定
                 .font(.largeTitle)
-            
+            //ボタンの表示
             Button("切り替えボタン"){
+                //ボタンがタップされてない時に実行したいコードを記述します
                 
+             outputText = "Hi,Swift!"
             }
+            //上下左右に余白を設定
+            .padding()
+            //背景色を青色に設定
+            .background(.blue)
+            //文字色を白色に設定
+            .foregroundStyle(.white)
         }
-        .padding()
+        
     }
 }
 
