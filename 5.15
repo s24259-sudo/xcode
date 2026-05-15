@@ -1,0 +1,37 @@
+//
+//  ContentView.swift
+//  My Janken
+//
+//  Created by Student on 2026/05/12.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        //垂直にレイアウト（縦方向にレイアウト）
+        VStack{
+            //グーの画像を指定
+            Image(.gu)
+            //リサイズを指定
+                .resizable()
+            //画面に収まるように、アスペクト比(縦横比)を維持する指定
+                .scaledToFit()
+            //じゃんけんの種類を指定
+            Text("グー")
+            
+            Button {
+                //Bottonでタップされた時の動きを記述
+                print("タップされたよ！")
+            } label: {
+                //Bottonに表示する文字を指定
+                Text("じゃんけんをする!")
+            }//「じゃんけんをする！」ボタンここまで
+
+        }//VStackここまで
+    }//bodyここまで
+}//ContenViewここまで
+
+#Preview {
+    ContentView()
+}
