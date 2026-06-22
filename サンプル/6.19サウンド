@@ -10,9 +10,9 @@ import AVFoundation
 
 class SoundPlayer: NSObject {
     //シンバルの音源データを読み込み
-    let cymbalData = NSDataAsset(name:"cymbalSound")!.data
+    let cymbalData = NSDataAsset(name: "cymbalSound")!.data
     //シンバル用プレイヤーの変数
-    var cymbalPlayer:AVAudiPlayer!
+    var cymbalPlayer: AVAudioPlayer!
     
     func cymbalPlay() {
         do{
@@ -21,7 +21,7 @@ class SoundPlayer: NSObject {
             
             //シンバルの音源再生
             cymbalPlayer.play()
-        }catch{
+        }catch {
             print("シンバルで、エラーが発生しました！")
         }
     }//cymbalPlayここまで
